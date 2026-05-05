@@ -1,0 +1,194 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+
+body{
+  direction: rtl;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:#ff7a00;
+  color:white;
+  backdrop-filter: blur(10px);
+  z-index:1000;
+  transition:0.5s;
+}
+
+/* يخلي كل النص يتغير مع اللون */
+header *{
+  color:inherit;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  margin-left:auto; /* 👈 هذا أهم سطر */
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.nav-links li{
+  cursor:pointer;
+  transition:0.3s;
+  font-size:18px;
+}
+
+.nav-links li:hover,
+.nav-links .active{
+  color:#901515;
+}
+
+/* زر أو رابط active */
+.nav-links a.active {
+  background: rgb(207, 201, 190);
+  color: black;
+  border-radius: 10px;
+  padding:5px 10px;
+}
+
+/* ===== SECTION ===== */
+.section{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:120px 80px 80px;
+  min-height:100vh;
+  background:#ff7a00;
+  color:white;
+  transition:0.5s;
+}
+
+/* النص */
+.content{
+  max-width:500px;
+}
+
+.content h1{
+  font-size:55px;
+  margin-bottom:20px;
+}
+
+.content p{
+  margin:20px 0;
+  line-height:1.6;
+  font-size:18px;
+}
+
+/* ===== الزر ===== */
+
+
+/* ===== الزر ===== */
+
+/* ===== الزر ===== */
+button{
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+/* 🟠 البرتقالي */
+.orange-mode button{
+  background:white;
+  color:black;
+}
+
+/* ⚪ الأبيض */
+.white-mode button{
+  background:black;
+  color:white;
+}
+س
+
+button:hover{
+  transform:scale(1.05);
+  opacity:0.85;
+}
+
+/* ===== صورة الجوال ===== */
+.image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.image img{
+  width:300px;
+  height:520px;
+  object-fit:contain;
+  transition:0.5s;
+}
+
+/* ===== الألوان ===== */
+.colors{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:20px;
+}
+
+.colors img{
+  width:70px;
+  height:110px;
+  object-fit:contain;
+  cursor:pointer;
+  transition:0.3s;
+  border-radius:10px;
+}
+
+.colors img:hover{
+  transform:scale(1.2);
+}
+
+.colors img.active{
+  border:3px solid white;
+}
+
+/* ===== وضع الخلفية البيضاء ===== */
+.dark-text{
+  color:black !important;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+
+  header{
+    padding:15px 20px;
+  }
+
+  .section{
+    flex-direction:column;
+    text-align:center;
+    padding:100px 20px;
+  }
+
+  .image img{
+    width:220px;
+    height:400px;
+    margin-top:20px;
+  }
+
+  .content h1{
+    font-size:35px;
+  }
+
+}
